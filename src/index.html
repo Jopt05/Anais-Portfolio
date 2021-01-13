@@ -7,6 +7,8 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
 
@@ -43,8 +45,8 @@
         <div class="about__div">
           <p class="about__div-text mb-15">
             My name is Anais Hernández Rivera and i'm a digital animation and visual effects
-            engineer from the Tecnológico de Coatzacoalcos. Through my career i've made a lot of projects
-            both with illustrations and software like illustrator, maya, blender and animate.
+            engineer from the Tec of Coatzacoalcos. Through my career i've made a lot of projects
+            both with illustrations and software like Illustrator, Maya, Blender and Animate.
           </p>
           <p class="about__div-text mb-15">
             There is a lot of things that make me happy but drawing <b>(and my pets)</b> is the perfect hobby
@@ -95,12 +97,12 @@
   
         <button class="art__button mb-60">VIEW ALL</button>
   
-        <form action="" class="contact" id="contact">
+        <form class="contact" id="contact">
           <img src="./assets/item11.png" alt="picture" class="contact__img" >
           <h2 class="contact__title mb-15">Contact me</h2>
-          <input type="text" class="contact__input input1" placeholder="Full Name" required>
-          <input type="text" class="contact__input input2" placeholder="Email Adress" required>
-          <textarea name="" id="" cols="30" rows="10" class="contact__input" placeholder="Leave a message" required></textarea>
+          <input type="text" class="contact__input input1" placeholder="Full Name" name="name" required>
+          <input type="email" class="contact__input input2" placeholder="Email Adress" name="email" required>
+          <textarea id="" cols="30" rows="10" class="contact__input textarea" placeholder="Leave a message" name="message" required></textarea>
           <button class="contact__button">SEND</button>
         </form>
       </div>
