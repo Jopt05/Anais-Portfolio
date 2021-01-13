@@ -175,7 +175,7 @@ p {
     bottom: 0;
     transform: translateY(95%);
     background-color: whitesmoke;
-    padding: 40px 200px;
+    padding: 60px 200px;
     grid-template-areas: 
     'title title'
     'Input1 Input2'
