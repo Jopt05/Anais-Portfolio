@@ -25,7 +25,7 @@ a {
 .header {
     display: flex;
     align-items: center;
-    border: 1px solid black;
+    color: #2E3D50;
 }
 
 p {
@@ -38,6 +38,19 @@ p {
 
 .mb-60 {
     margin-bottom: 60px !important;
+}
+
+.header__title-h1 {
+    line-height: .8;
+    color: #2E3D50;
+    margin: 0px;
+}
+
+.header__title-sub {
+    color: #2E3D50;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .button {
@@ -60,6 +73,13 @@ p {
 .header__nav-ul-li {
     font-weight: 700;
     font-size: 20px;
+    color: #2E3D50;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.header__nav-ul-li:hover {
+    color: #557397;
 }
 
 .header__nav-ul-li:not(:last-child) {
@@ -87,6 +107,7 @@ p {
     font-size: 60px;
     margin: 0px 0px;
     z-index: 2000;
+    color: #2E3D50;
 }
 
 .hero__img {
@@ -113,16 +134,19 @@ p {
     font-size: 60px;
     margin: 0px;
     line-height: .8;
+    color: #2E3D50;
 }
 
 .about__title2 {
     font-size: 50px;
     line-height: .8;
+    color: #2E3D50;
 }
 
 .about__div-text {
     font-size: 20px;
     line-height: 1.5;
+    color: #2E3D50;
 }
 
 .art {
@@ -163,8 +187,15 @@ p {
     padding: 10px 25px;
     border-radius: 25px;
     background-color: whitesmoke;
-    color: purple;
+    color: #2E3D50;
     border: none;
+    font-weight: 700;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.art__button:hover {
+    color: #557397;
 }
 
 .contact {
@@ -184,11 +215,20 @@ p {
     'Button Button';
 }
 
+.contact__img {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 150px;
+    height: 200px;
+}
+
 .contact__title {
     grid-area: title;
     text-align: center;
     margin: 0px;
     font-size: 30px;
+    color: #2E3D50;
 }
 
 .input1 {
@@ -204,12 +244,25 @@ p {
     resize: none;
 }
 
+.input1:focus,
+.input2:focus,
+.contact textarea:focus {
+    outline: none;
+}
+
 .contact__button {
     grid-area: Button;
-    background-color: orangered;
+    background-color: #E96356;
     color: white;
     padding: 10px 0px;
     border: none;
+    font-weight: 700;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.contact__button:hover {
+    background-color: #e23623;
 }
 
 .contact__input {
@@ -218,6 +271,39 @@ p {
 }
 
 .footer {
-    padding: 450px 150px 40px 150px;
-    background-color: darkslateblue;
+    padding: 500px 150px 40px 150px;
+    background-color: #15134F;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social__link i {
+    font-size: 40px;
+    color: whitesmoke;
+    transition: all .2s ease-in-out;
+}
+
+.social__link i:hover {
+    color: #bebebe;
+}
+
+.social__link:first-child {
+    margin-right: 25px;
+}
+
+.copyright {
+    font-size: 30px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+@media only screen and (max-width: 769px) {
+
+    .content {
+        display: none;
+    }
+
 }

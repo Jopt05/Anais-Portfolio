@@ -60,7 +60,8 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options:{
-                            esModule: false
+                            esModule: false,
+                            name: '[path][name].[contenthash].[ext]',
                         }
                     }
                 ]
