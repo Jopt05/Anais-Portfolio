@@ -1,5 +1,7 @@
-import './styles.css';
 import path from './assets/php/contact.php'
+import axios from 'axios';
+import './styles.css';
+import Swal from 'sweetalert2'
 
 const homelink = document.querySelector('.homeli'),
 aboutli = document.querySelector('.aboutli'),
@@ -12,7 +14,9 @@ contact = document.querySelector('.contact'),
 toPageButton = document.querySelector('.art__button'),
 input1 = document.querySelector('.input1'),
 input2 = document.querySelector('.input2'),
-textarea = document.querySelector('.textarea');
+textarea = document.querySelector('.textarea'),
+menuRes = document.querySelector('.header__res'),
+menuResDiv = document.querySelector('.header__nav');
 
 homelink.addEventListener( 'click', () => {
     home.scrollIntoView({
@@ -39,10 +43,10 @@ contactli.addEventListener( 'click', () => {
 } )
 
 toPageButton.addEventListener('click', () => {
-    window.open('https://www.instagram.com/ann_30r/')
+    window.open('https://www.instagram.com/ann_30r/', '_blank')
 })
 
-contact.addEventListener('submit', async(e) => {
+contact.addEventListener( 'submit', (e) => {
     e.preventDefault();
 
     input1.value = '';
@@ -50,19 +54,38 @@ contact.addEventListener('submit', async(e) => {
     textarea.value = '';
 
     const data = new FormData(contact);
-    await fetch(path, {
-        method:'post',
-        body: data,
+
+    axios({
+        method: 'post',
+        url: path,
+        headers: { 'content-type' : 'application/json' },
+        data: data
     })
-    .then( swal({
+    .then( Swal.fire({
         icon: "success",
         title: "Message sent!",
         text: "I'll contact you ASAP"
     }) )
-    .catch( swal({
+    .catch( Swal.fire({
         icon: "error",
         title: "Something went wrong",
         text: "Please try again."
     }) );
 
+})
+
+menuRes.addEventListener('click', () => {
+    menuRes.classList.toggle('opened');
+    ( menuResDiv.classList.contains("show") )
+    ? menuResDiv.classList.remove("show")
+    : menuResDiv.classList.add("show");
+})
+
+menuResDiv.addEventListener('click', () => {
+    ( menuRes.classList.contains("opened") )
+    ? menuRes.classList.remove("opened")
+    : '';
+    ( menuResDiv.classList.contains("show") )
+    ? menuResDiv.classList.remove("show")
+    : menuResDiv.classList.add("show");
 })

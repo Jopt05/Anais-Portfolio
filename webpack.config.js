@@ -12,6 +12,11 @@ module.exports = {
           new CssMinimizerPlugin(),
         ],
     },
+    devServer: {
+        host: '10.0.0.7',
+        hot: true,
+        port: 3000
+    },
     module: {
         // Reglas a realizar cuando se realiza la construccion 
         rules: [
@@ -55,7 +60,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebPackPlugin({
-            template: './src/index.html',
+            template: './index.html',
             filename: './index.html'
         }),
         new MiniCssExtractPlugin({

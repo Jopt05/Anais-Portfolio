@@ -8,11 +8,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
 
-    <div class="content animate__animated animate__fadeIn">
+    <div class="padding content animate__animated animate__fadeIn">
       <header class="header">
         <div class="header__title animate__animated animate__backInLeft">
           <h1 class="header__title-h1">Anais Hernández</h1>
@@ -26,6 +25,11 @@
             <li class="header__nav-ul-li contactli">Contact</li>
           </ul>
         </nav>
+        <div class="header__res">
+          <span class="header__res-span"></span>
+          <span class="header__res-span"></span>
+          <span class="header__res-span"></span>
+        </div>
       </header>
   
       <div class="hero" id="home">
@@ -99,24 +103,24 @@
   
         <form class="contact" id="contact">
           <img src="./assets/item11.png" alt="picture" class="contact__img" >
-          <h2 class="contact__title mb-15">Contact me</h2>
+          <h2 class="contact__title">Contact me</h2>
           <input type="text" class="contact__input input1" placeholder="Full Name" name="name" required>
           <input type="email" class="contact__input input2" placeholder="Email Adress" name="email" required>
           <textarea id="" cols="30" rows="10" class="contact__input textarea" placeholder="Leave a message" name="message" required></textarea>
-          <button class="contact__button">SEND</button>
+          <button type="submit" class="contact__button">SEND</button>
         </form>
       </div>
     </div>
 
     <footer class="footer">
       <div class="social">
-        <a class="social__link" href="https://www.facebook.com/Anaishdezr"><i class='bx bxl-facebook-circle'></i></a>
-        <a class="social__link" href="https://www.instagram.com/ann_30r/"><i class='bx bxl-instagram' ></i></a>
+        <a class="social__link" target="_blank" href="https://www.facebook.com/Anaishdezr"><i class='bx bxl-facebook-circle'></i></a>
+        <a class="social__link" target="_blank" href="https://www.instagram.com/ann_30r/"><i class='bx bxl-instagram' ></i></a>
       </div>
       <h2 class="copyright">Anais Hernández | Copyright 2021</h2>
     </footer>
 
-    <script src="./index.js"></script>
+    <script src="./src/index.js"></script>
   </body>
 </html>
 

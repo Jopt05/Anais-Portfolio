@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.config.js",
-    "start": "webpack serve --open --port=3000"
+    "start": "webpack serve --open"
   },
   "author": "Jopt05",
   "license": "ISC",
@@ -31,6 +31,8 @@
     "webpack-dev-server": "^3.11.1"
   },
   "dependencies": {
-    "php-loader": "^0.2.0"
+    "axios": "^0.21.1",
+    "php-loader": "^0.2.0",
+    "sweetalert2": "^10.13.0"
   }
 }
